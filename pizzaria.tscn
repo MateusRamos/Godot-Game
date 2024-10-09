@@ -1,7 +1,7 @@
-[gd_scene load_steps=44 format=4 uid="uid://cn2flegatrc68"]
+[gd_scene load_steps=49 format=4 uid="uid://cn2flegatrc68"]
 
 [ext_resource type="Texture2D" uid="uid://dw6u3jq470mb1" path="res://SpriteSheet/pisos.png" id="1_j3k3b"]
-[ext_resource type="Texture2D" uid="uid://o75g2arh424k" path="res://SpriteSheet/Teste_personagem.png" id="2_jeg2m"]
+[ext_resource type="Texture2D" uid="uid://cul8fxydsu3vi" path="res://Templates/Teste_personagem.png" id="2_p670n"]
 [ext_resource type="Texture2D" uid="uid://cvarmow2ratw8" path="res://SpriteSheet/paredes.png" id="2_umwk4"]
 [ext_resource type="Texture2D" uid="uid://dwgg50daaj4gj" path="res://SpriteSheet/teto.png" id="3_sxuo3"]
 [ext_resource type="Texture2D" uid="uid://c14a6neml53pj" path="res://SpriteSheet/cadeiras.png" id="4_wekdm"]
@@ -96,40 +96,85 @@ func _on_porta_body_entered(body: Node2D) -> void:
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jbwha"]
 size = Vector2(66, 83)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hnuhv"]
-atlas = ExtResource("2_jeg2m")
+[sub_resource type="AtlasTexture" id="AtlasTexture_3vvue"]
+atlas = ExtResource("2_p670n")
 region = Rect2(0, 0, 128, 256)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_iom2q"]
-atlas = ExtResource("2_jeg2m")
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3lyj"]
+atlas = ExtResource("2_p670n")
+region = Rect2(384, 0, 128, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jtcvo"]
+atlas = ExtResource("2_p670n")
+region = Rect2(256, 0, 128, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_433u5"]
+atlas = ExtResource("2_p670n")
+region = Rect2(0, 0, 128, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8cd36"]
+atlas = ExtResource("2_p670n")
 region = Rect2(128, 0, 128, 256)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wtma4"]
-atlas = ExtResource("2_jeg2m")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ydwlh"]
+atlas = ExtResource("2_p670n")
 region = Rect2(0, 0, 128, 256)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3xhon"]
-atlas = ExtResource("2_jeg2m")
+[sub_resource type="AtlasTexture" id="AtlasTexture_s3ddy"]
+atlas = ExtResource("2_p670n")
+region = Rect2(128, 0, 128, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mtwl5"]
+atlas = ExtResource("2_p670n")
 region = Rect2(256, 0, 128, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r30rm"]
+atlas = ExtResource("2_p670n")
+region = Rect2(384, 0, 128, 256)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_i7clt"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hnuhv")
+"texture": SubResource("AtlasTexture_3vvue")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_iom2q")
+"texture": SubResource("AtlasTexture_l3lyj")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wtma4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3xhon")
+"texture": SubResource("AtlasTexture_jtcvo")
 }],
 "loop": true,
 "name": &"default",
-"speed": 3.0
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_433u5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8cd36")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 2.01
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ydwlh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s3ddy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mtwl5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r30rm")
+}],
+"loop": true,
+"name": &"new_animation_1",
+"speed": 5.0
 }]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p4ecr"]
@@ -304,7 +349,8 @@ position = Vector2(-152, 39)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Character"]
 position = Vector2(-152, 39)
 sprite_frames = SubResource("SpriteFrames_i7clt")
-frame_progress = 0.430575
+animation = &"new_animation_1"
+frame_progress = 0.444444
 
 [node name="Parede" type="TileMapLayer" parent="Node2D"]
 tile_map_data = PackedByteArray("AAD2//r/AAAAAAAAAAD2//v/AAAAAAEAAAD2//z/AAAAAAIAAAD3//r/AAABAAAAAAD3//v/AAABAAEAAAD3//z/AAABAAIAAAD4//r/AAAAAAAAAAD4//v/AAAAAAEAAAD4//z/AAAAAAIAAAD5//r/AAABAAAAAAD5//v/AAABAAEAAAD5//z/AAABAAIAAAD6//r/AAAAAAAAAAD6//v/AAAAAAEAAAD6//z/AAAAAAIAAAD7//r/AAABAAAAAAD7//v/AAABAAEAAAD7//z/AAABAAIAAAD8//r/AAAAAAAAAAD8//v/AAAAAAEAAAD8//z/AAAAAAIAAAD9//r/AAABAAAAAAD9//v/AAABAAEAAAD9//z/AAABAAIAAAD+//r/AAAAAAAAAAD+//v/AAAAAAEAAAD+//z/AAAAAAIAAAD///r/AAABAAAAAAD///v/AAABAAEAAAD///z/AAABAAIAAAAAAPr/AAAAAAAAAAAAAPv/AAAAAAEAAAAAAPz/AAAAAAIAAAABAPr/AAABAAAAAAABAPv/AAABAAEAAAABAPz/AAABAAIAAAACAPr/AAAAAAAAAAACAPv/AAAAAAEAAAACAPz/AAAAAAIAAAADAPr/AAABAAAAAAADAPv/AAABAAEAAAADAPz/AAABAAIAAAAEAPr/AAAAAAAAAAAEAPv/AAAAAAEAAAAEAPz/AAAAAAIAAAAFAPr/AAABAAAAAAAFAPv/AAABAAEAAAAFAPz/AAABAAIAAAANAPr/AAABAAAAAAANAPv/AAABAAEAAAANAPz/AAABAAIAAAAOAPr/AAAAAAAAAAAOAPv/AAAAAAEAAAAOAPz/AAAAAAIAAAAPAPr/AAABAAAAAAAPAPv/AAABAAEAAAAPAPz/AAABAAIAAAAQAPr/AAAAAAAAAAAQAPv/AAAAAAEAAAAQAPz/AAAAAAIAAAARAPr/AAABAAAAAAARAPv/AAABAAEAAAARAPz/AAABAAIAAAASAPr/AAAAAAAAAAASAPv/AAAAAAEAAAASAPz/AAAAAAIAAAATAPr/AAABAAAAAAATAPv/AAABAAEAAAATAPz/AAABAAIAAAAUAPr/AAAAAAAAAAAUAPv/AAAAAAEAAAAUAPz/AAAAAAIAAAAVAPr/AAABAAAAAAAVAPv/AAABAAEAAAAVAPz/AAABAAIAAAD2//D/AAAAAAEAAAD3//D/AAABAAEAAAD4//D/AAAAAAEAAAD5//D/AAABAAEAAAD6//D/AAAAAAEAAAD7//D/AAABAAEAAAD8//D/AAAAAAEAAAD9//D/AAABAAEAAAD+//D/AAAAAAEAAAD///D/AAABAAEAAAAAAPD/AAAAAAEAAAABAPD/AAABAAEAAAACAPD/AAAAAAEAAAADAPD/AAABAAEAAAAEAPD/AAAAAAEAAAAFAPD/AAABAAEAAAAGAPD/AAAAAAEAAAAHAPD/AAABAAEAAAAIAPD/AAAAAAEAAAAJAPD/AAABAAEAAAAKAPD/AAAAAAEAAAALAPD/AAABAAEAAAAMAPD/AAAAAAEAAAANAPD/AAABAAEAAAAOAPD/AAAAAAEAAAAPAPD/AAABAAEAAAAQAPD/AAAAAAEAAAARAPD/AAABAAEAAAASAPD/AAAAAAEAAAATAPD/AAABAAEAAAAUAPD/AAAAAAEAAAAVAPD/AAABAAEAAAD2//b/AAAAAAAAAAD2//f/AAAAAAEAAAD2//j/AAAAAAIAAAD3//b/AAABAAAAAAD3//f/AAABAAEAAAD3//j/AAABAAIAAAD4//b/AAAAAAAAAAD4//f/AAAAAAEAAAD4//j/AAAAAAIAAAD5//b/AAABAAAAAAD5//f/AAABAAEAAAD5//j/AAABAAIAAAD6//b/AAAAAAAAAAD7//b/AAABAAAAAAD8//b/AAAAAAAAAAD8//f/AAAAAAEAAAD8//j/AAAAAAIAAAD9//b/AAABAAAAAAD9//f/AAABAAEAAAD9//j/AAABAAIAAAD+//b/AAAAAAAAAAD+//f/AAAAAAEAAAD+//j/AAAAAAIAAAD///b/AAABAAAAAAD///f/AAABAAEAAAD///j/AAABAAIAAAAAAPb/AAAAAAAAAAAAAPf/AAAAAAEAAAAAAPj/AAAAAAIAAAABAPb/AAABAAAAAAABAPf/AAABAAEAAAABAPj/AAABAAIAAAACAPb/AAAAAAAAAAACAPf/AAAAAAEAAAACAPj/AAAAAAIAAAADAPb/AAABAAAAAAADAPf/AAABAAEAAAADAPj/AAABAAIAAAAEAPb/AAAAAAAAAAAEAPf/AAAAAAEAAAAEAPj/AAAAAAIAAAAFAPb/AAABAAAAAAAFAPf/AAABAAEAAAAFAPj/AAABAAIAAAAGAPb/AAAAAAAAAAAGAPf/AAAAAAEAAAAGAPj/AAAAAAIAAAAHAPb/AAABAAAAAAAHAPf/AAABAAEAAAAHAPj/AAABAAIAAAAIAPb/AAAAAAAAAAAIAPf/AAAAAAEAAAAIAPj/AAAAAAIAAAAJAPb/AAABAAAAAAAKAPb/AAAAAAAAAAALAPb/AAABAAAAAAALAPf/AAABAAEAAAALAPj/AAABAAIAAAAMAPb/AAAAAAAAAAAMAPf/AAAAAAEAAAAMAPj/AAAAAAIAAAANAPb/AAABAAAAAAANAPf/AAABAAEAAAANAPj/AAABAAIAAAAOAPb/AAAAAAAAAAAOAPf/AAAAAAEAAAAOAPj/AAAAAAIAAAAPAPb/AAABAAAAAAAPAPf/AAABAAEAAAAPAPj/AAABAAIAAAAQAPb/AAAAAAAAAAAQAPf/AAAAAAEAAAAQAPj/AAAAAAIAAAARAPb/AAABAAAAAAASAPb/AAAAAAAAAAATAPb/AAABAAAAAAATAPf/AAABAAEAAAATAPj/AAABAAIAAAAUAPb/AAAAAAAAAAAUAPf/AAAAAAEAAAAUAPj/AAAAAAIAAAAVAPb/AAABAAAAAAAVAPf/AAABAAEAAAAVAPj/AAABAAIAAAD2/+//AAAAAAAAAAD2//H/AAAAAAIAAAD3/+//AAABAAAAAAD3//H/AAABAAIAAAD4/+//AAAAAAAAAAD4//H/AAAAAAIAAAD5/+//AAABAAAAAAD5//H/AAABAAIAAAD6/+//AAAAAAAAAAD6//H/AAAAAAIAAAD7/+//AAABAAAAAAD7//H/AAABAAIAAAD8/+//AAAAAAAAAAD8//H/AAAAAAIAAAD9/+//AAABAAAAAAD9//H/AAABAAIAAAD+/+//AAAAAAAAAAD+//H/AAAAAAIAAAD//+//AAABAAAAAAD///H/AAABAAIAAAAAAO//AAAAAAAAAAAAAPH/AAAAAAIAAAABAO//AAABAAAAAAABAPH/AAABAAIAAAACAO//AAAAAAAAAAACAPH/AAAAAAIAAAADAO//AAABAAAAAAADAPH/AAABAAIAAAAEAO//AAAAAAAAAAAEAPH/AAAAAAIAAAAFAO//AAABAAAAAAAFAPH/AAABAAIAAAAGAO//AAAAAAAAAAAGAPH/AAAAAAIAAAAHAO//AAABAAAAAAAHAPH/AAABAAIAAAAIAO//AAAAAAAAAAAIAPH/AAAAAAIAAAAJAO//AAABAAAAAAAJAPH/AAABAAIAAAAKAO//AAAAAAAAAAAKAPH/AAAAAAIAAAALAO//AAABAAAAAAALAPH/AAABAAIAAAAMAO//AAAAAAAAAAAMAPH/AAAAAAIAAAANAO//AAABAAAAAAANAPH/AAABAAIAAAAOAO//AAAAAAAAAAAOAPH/AAAAAAIAAAAPAO//AAABAAAAAAAPAPH/AAABAAIAAAAQAO//AAAAAAAAAAAQAPH/AAAAAAIAAAARAO//AAABAAAAAAARAPH/AAABAAIAAAASAO//AAAAAAAAAAASAPH/AAAAAAIAAAATAO//AAABAAAAAAATAPH/AAABAAIAAAAUAO//AAAAAAAAAAAUAPH/AAAAAAIAAAAVAO//AAABAAAAAAAVAPH/AAABAAIAAAAGAPr/AAAAAAAAAAAGAPv/AAAAAAEAAAAGAPz/AAAAAAIAAAAHAPr/AAAAAAAAAAAHAPv/AAAAAAEAAAAHAPz/AAAAAAIAAAAIAPr/AAABAAAAAAAIAPv/AAABAAEAAAAIAPz/AAABAAIAAAAJAPr/AAAAAAAAAAAJAPv/AAAAAAEAAAAJAPz/AAAAAAIAAAA=")
