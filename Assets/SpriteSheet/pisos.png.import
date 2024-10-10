@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hhu4l7hv7q0x"
-path="res://.godot/imported/planta2.png-9453761f1c8010e48dde843ccc01c98d.ctex"
+uid="uid://5uony2rw50v8"
+path="res://.godot/imported/pisos.png-17377b1f7870ccd88b2315942147cb8a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SpriteSheet/planta2.png"
-dest_files=["res://.godot/imported/planta2.png-9453761f1c8010e48dde843ccc01c98d.ctex"]
+source_file="res://Assets/SpriteSheet/pisos.png"
+dest_files=["res://.godot/imported/pisos.png-17377b1f7870ccd88b2315942147cb8a.ctex"]
 
 [params]
 

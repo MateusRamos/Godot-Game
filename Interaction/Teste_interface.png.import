@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ci6pkogrdwxxi"
-path="res://.godot/imported/pranta.png-a7a8b930bc239f0d7bc800356dce5f52.ctex"
+uid="uid://d1s285ybyf4rg"
+path="res://.godot/imported/Teste_interface.png-51bb2f599fb0ca68e14a32cf658fcd95.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SpriteSheet/pranta.png"
-dest_files=["res://.godot/imported/pranta.png-a7a8b930bc239f0d7bc800356dce5f52.ctex"]
+source_file="res://Interaction/Teste_interface.png"
+dest_files=["res://.godot/imported/Teste_interface.png-51bb2f599fb0ca68e14a32cf658fcd95.ctex"]
 
 [params]
 

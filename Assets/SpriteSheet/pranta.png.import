@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwgg50daaj4gj"
-path="res://.godot/imported/teto.png-533c14b10f61144b74bf2373faf269fd.ctex"
+uid="uid://ci6pkogrdwxxi"
+path="res://.godot/imported/pranta.png-b5b7b12d7cbf78dd272d772267e2f7a5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SpriteSheet/teto.png"
-dest_files=["res://.godot/imported/teto.png-533c14b10f61144b74bf2373faf269fd.ctex"]
+source_file="res://Assets/SpriteSheet/pranta.png"
+dest_files=["res://.godot/imported/pranta.png-b5b7b12d7cbf78dd272d772267e2f7a5.ctex"]
 
 [params]
 

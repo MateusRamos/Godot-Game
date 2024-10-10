@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bild02om4at7t"
-path="res://.godot/imported/mesas.png-b6626fbade56a2291adef0f7c5e18ad6.ctex"
+uid="uid://bdr8so4kdd852"
+path="res://.godot/imported/maquinas.png-81b2ebebdf4a3807d55918a677e57580.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SpriteSheet/mesas.png"
-dest_files=["res://.godot/imported/mesas.png-b6626fbade56a2291adef0f7c5e18ad6.ctex"]
+source_file="res://Assets/SpriteSheet/maquinas.png"
+dest_files=["res://.godot/imported/maquinas.png-81b2ebebdf4a3807d55918a677e57580.ctex"]
 
 [params]
 

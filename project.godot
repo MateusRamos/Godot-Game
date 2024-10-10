@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="teste de mapa"
-run/main_scene="res://pizzaria.tscn"
+run/main_scene="res://Scenes/Levels/Level1.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[layer_names]
+
+2d_physics/layer_1="world"
+2d_physics/layer_2="player"
 
 [rendering]
 

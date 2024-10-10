@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cf2ic6ip5sum6"
-path="res://.godot/imported/Balcões_pilastras.png-31d386f0862158d2fe44c9e0d986385b.ctex"
+uid="uid://o75g2arh424k"
+path="res://.godot/imported/Teste_personagem.png-666ecfa62d06f9d5418ba5f13f884977.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SpriteSheet/Balcões_pilastras.png"
-dest_files=["res://.godot/imported/Balcões_pilastras.png-31d386f0862158d2fe44c9e0d986385b.ctex"]
+source_file="res://Assets/SpriteSheet/Teste_personagem.png"
+dest_files=["res://.godot/imported/Teste_personagem.png-666ecfa62d06f9d5418ba5f13f884977.ctex"]
 
 [params]
 

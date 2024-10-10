@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5uony2rw50v8"
-path="res://.godot/imported/pisos.png-0b4fdfe5b21d47845e4c3ea75693a2e3.ctex"
+uid="uid://c14a6neml53pj"
+path="res://.godot/imported/cadeiras.png-d28f34ef55a790f188dae604089ea3db.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SpriteSheet/pisos.png"
-dest_files=["res://.godot/imported/pisos.png-0b4fdfe5b21d47845e4c3ea75693a2e3.ctex"]
+source_file="res://Assets/SpriteSheet/cadeiras.png"
+dest_files=["res://.godot/imported/cadeiras.png-d28f34ef55a790f188dae604089ea3db.ctex"]
 
 [params]
 

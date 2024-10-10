@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1s285ybyf4rg"
-path="res://.godot/imported/Teste_interface.png-bb1c55604430505df0bb28d87b03f3f0.ctex"
+uid="uid://b1tngfyswookj"
+path="res://.godot/imported/interativos.png-4e3186430a651630bebb297a5b6e3a93.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Templates/Teste_interface.png"
-dest_files=["res://.godot/imported/Teste_interface.png-bb1c55604430505df0bb28d87b03f3f0.ctex"]
+source_file="res://Assets/SpriteSheet/interativos.png"
+dest_files=["res://.godot/imported/interativos.png-4e3186430a651630bebb297a5b6e3a93.ctex"]
 
 [params]
 

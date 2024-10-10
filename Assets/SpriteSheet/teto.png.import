@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdr8so4kdd852"
-path="res://.godot/imported/maquinas.png-e66599a828cdb049c215a3e395da6d82.ctex"
+uid="uid://dwgg50daaj4gj"
+path="res://.godot/imported/teto.png-e818ef23f4dff11ae56efcdcabc5fab6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SpriteSheet/maquinas.png"
-dest_files=["res://.godot/imported/maquinas.png-e66599a828cdb049c215a3e395da6d82.ctex"]
+source_file="res://Assets/SpriteSheet/teto.png"
+dest_files=["res://.godot/imported/teto.png-e818ef23f4dff11ae56efcdcabc5fab6.ctex"]
 
 [params]
 

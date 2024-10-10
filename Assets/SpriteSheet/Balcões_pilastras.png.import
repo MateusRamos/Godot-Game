@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c14a6neml53pj"
-path="res://.godot/imported/cadeiras.png-a40053d006a4af377a5b30a570dfdeda.ctex"
+uid="uid://cf2ic6ip5sum6"
+path="res://.godot/imported/Balcões_pilastras.png-201025ff50a76d9eb410eab61f3f6bfb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SpriteSheet/cadeiras.png"
-dest_files=["res://.godot/imported/cadeiras.png-a40053d006a4af377a5b30a570dfdeda.ctex"]
+source_file="res://Assets/SpriteSheet/Balcões_pilastras.png"
+dest_files=["res://.godot/imported/Balcões_pilastras.png-201025ff50a76d9eb410eab61f3f6bfb.ctex"]
 
 [params]
 

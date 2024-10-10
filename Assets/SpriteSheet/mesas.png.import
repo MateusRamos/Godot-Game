@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cul8fxydsu3vi"
-path="res://.godot/imported/Teste_personagem.png-669ca2745c5fde73c962ae602aed7277.ctex"
+uid="uid://bild02om4at7t"
+path="res://.godot/imported/mesas.png-7c362811235ffcf7a26be9138e47b6d6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Templates/Teste_personagem.png"
-dest_files=["res://.godot/imported/Teste_personagem.png-669ca2745c5fde73c962ae602aed7277.ctex"]
+source_file="res://Assets/SpriteSheet/mesas.png"
+dest_files=["res://.godot/imported/mesas.png-7c362811235ffcf7a26be9138e47b6d6.ctex"]
 
 [params]
 
