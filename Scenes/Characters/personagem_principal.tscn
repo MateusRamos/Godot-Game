@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://dutdwquij5hqd"]
+
+[ext_resource type="Texture2D" uid="uid://cul8fxydsu3vi" path="res://Interaction/Teste_personagem.png" id="1_uo5so"]
+[ext_resource type="Script" path="res://Scenes/Characters/personagem_principal.gd" id="1_wstyx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3vvue"]
+atlas = ExtResource("1_uo5so")
+region = Rect2(0, 0, 128, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3lyj"]
+atlas = ExtResource("1_uo5so")
+region = Rect2(384, 0, 128, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jtcvo"]
+atlas = ExtResource("1_uo5so")
+region = Rect2(256, 0, 128, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2kik3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3vvue")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l3lyj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jtcvo")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_33sfk"]
+size = Vector2(63.5, 80)
+
+[node name="Personagem_principal" type="CharacterBody2D"]
+script = ExtResource("1_wstyx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -90)
+sprite_frames = SubResource("SpriteFrames_2kik3")
+animation = &"Idle"
+frame_progress = 0.374253
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.3, 0.3)
+limit_left = -1328
+limit_top = -2224
+limit_right = 2864
+limit_bottom = 944
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_33sfk")
