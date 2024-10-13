@@ -1,15 +1,15 @@
-[gd_scene load_steps=11 format=3 uid="uid://cn2flegatrc68"]
+[gd_scene load_steps=10 format=3 uid="uid://i8dj8h54t7l3"]
 
-[ext_resource type="Script" path="res://Scenes/Levels/level_1.gd" id="1_j0457"]
-[ext_resource type="PackedScene" uid="uid://c1tmc4dxgbvr5" path="res://Scenes/Mapa_Level_1/mapa.tscn" id="2_f8xv0"]
+[ext_resource type="PackedScene" uid="uid://dcvnxcckb2msh" path="res://Scenes/Mapa_Level_1/map_pré_player.tscn" id="1_q16o7"]
+[ext_resource type="PackedScene" uid="uid://cpnhjr0d1eess" path="res://Scenes/Mapa_Level_1/map_pós_player.tscn" id="3_8hioa"]
 [ext_resource type="PackedScene" uid="uid://dutdwquij5hqd" path="res://Scenes/Characters/personagem_principal.tscn" id="3_pe3rk"]
-[ext_resource type="Script" path="res://Scenes/Mapa_Level_1/mapa.gd" id="4_sg6y8"]
+[ext_resource type="PackedScene" uid="uid://dim267io8223h" path="res://Scenes/Mapa_Level_1/colisores.tscn" id="4_3sxbl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hd8jy"]
 size = Vector2(2688, 1281)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_73sia"]
-size = Vector2(2696, 1137)
+size = Vector2(2686, 1136)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rt8n8"]
 size = Vector2(1153, 897)
@@ -17,75 +17,63 @@ size = Vector2(1153, 897)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8utyb"]
 size = Vector2(1153, 640)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_asjyp"]
-size = Vector2(339.5, 2435)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uwkvr"]
 size = Vector2(1153, 897)
 
 [node name="Level 1" type="Node2D"]
-script = ExtResource("1_j0457")
 
 [node name="Personagem_principal" parent="." instance=ExtResource("3_pe3rk")]
 z_index = 1
 
-[node name="Mapa" parent="." instance=ExtResource("2_f8xv0")]
-script = ExtResource("4_sg6y8")
+[node name="Map_pré_player" parent="." instance=ExtResource("1_q16o7")]
 
-[node name="Int_hidde_walls" type="Node2D" parent="."]
+[node name="map_pós_player" parent="." instance=ExtResource("3_8hioa")]
+z_index = 2
+
+[node name="Colisores" parent="." instance=ExtResource("4_3sxbl")]
 visible = false
 
+[node name="Int_hidde_walls" type="Node2D" parent="."]
+
 [node name="Hall" type="Area2D" parent="Int_hidde_walls"]
+visible = false
 
 [node name="Int_Hall" type="CollisionShape2D" parent="Int_hidde_walls/Hall"]
 position = Vector2(-64, 256.5)
 shape = SubResource("RectangleShape2D_hd8jy")
 
 [node name="Cozinha" type="Area2D" parent="Int_hidde_walls"]
+visible = false
 position = Vector2(-113, -966)
 monitorable = false
 
 [node name="Int_Cozinha" type="CollisionShape2D" parent="Int_hidde_walls/Cozinha"]
-position = Vector2(5, 0.5)
 shape = SubResource("RectangleShape2D_73sia")
 
 [node name="Financeiro" type="Area2D" parent="Int_hidde_walls"]
-monitorable = false
+visible = false
 
 [node name="Int_Financeiro" type="CollisionShape2D" parent="Int_hidde_walls/Financeiro"]
 position = Vector2(2239.5, -191.5)
 shape = SubResource("RectangleShape2D_rt8n8")
 
 [node name="Marketing" type="Area2D" parent="Int_hidde_walls"]
-monitorable = false
+visible = false
 
 [node name="Int_Marketing" type="CollisionShape2D" parent="Int_hidde_walls/Marketing"]
 position = Vector2(2239.5, 576)
 shape = SubResource("RectangleShape2D_8utyb")
 
-[node name="Corredor" type="Area2D" parent="Int_hidde_walls"]
-monitorable = false
-
-[node name="Int_Corredor" type="CollisionShape2D" parent="Int_hidde_walls/Corredor"]
-position = Vector2(1448.25, -319.5)
-shape = SubResource("RectangleShape2D_asjyp")
-
 [node name="Sala_Chefe" type="Area2D" parent="Int_hidde_walls"]
-monitorable = false
+visible = false
 
 [node name="Int_Sala_Chefe" type="CollisionShape2D" parent="Int_hidde_walls/Sala_Chefe"]
 position = Vector2(2240, -1087)
 shape = SubResource("RectangleShape2D_uwkvr")
 
-[connection signal="body_entered" from="Int_hidde_walls/Hall" to="Personagem_principal" method="_on_hall_body_entered"]
-[connection signal="body_exited" from="Int_hidde_walls/Hall" to="Personagem_principal" method="_on_hall_body_exited"]
 [connection signal="body_entered" from="Int_hidde_walls/Cozinha" to="Personagem_principal" method="_on_cozinha_body_entered"]
 [connection signal="body_exited" from="Int_hidde_walls/Cozinha" to="Personagem_principal" method="_on_cozinha_body_exited"]
 [connection signal="body_entered" from="Int_hidde_walls/Financeiro" to="Personagem_principal" method="_on_financeiro_body_entered"]
-[connection signal="body_exited" from="Int_hidde_walls/Financeiro" to="Personagem_principal" method="_on_financeiro_body_exited"]
-[connection signal="body_entered" from="Int_hidde_walls/Marketing" to="Personagem_principal" method="_on_marketing_body_entered"]
-[connection signal="body_exited" from="Int_hidde_walls/Marketing" to="Personagem_principal" method="_on_marketing_body_exited"]
-[connection signal="body_entered" from="Int_hidde_walls/Sala_Chefe" to="Personagem_principal" method="_on_sala_chefe_body_entered"]
-[connection signal="body_exited" from="Int_hidde_walls/Sala_Chefe" to="Personagem_principal" method="_on_sala_chefe_body_exited"]
 
-[editable path="Mapa"]
+[editable path="Map_pré_player"]
+[editable path="map_pós_player"]

@@ -1,11 +1,12 @@
 extends CharacterBody2D
 
+var Controller = preload("res://controller.gd")
+var MeuController
 @onready var animated_sprite = $AnimatedSprite2D  # Referência ao AnimatedSprite2D
-var speed = 500
+var speed = 900
 
 func _ready():
-	$"../Map_pré_player/Hidden_Cozinha".visible = true
-	$"../map_pós_player/Hidden_Cozinha".visible = true
+	MeuController = MeuScript.new()
 	animated_sprite.play("Idle")  # Certifique-se de que há uma animação chamada "idle" no AnimatedSprite2D
 
 func _process(delta):
@@ -35,10 +36,40 @@ func _process(delta):
 
 
 
-func _on_cozinha_body_entered(body: Node2D) -> void:
-	$"../Map_pré_player/Hidden_Cozinha".visible = false
-	$"../map_pós_player/Hidden_Cozinha".visible = false
 
+
+#Fazer parede da cozinha sumir
+func _on_cozinha_body_entered(body: Node2D) -> void:
+	$"../Mapa/Hidden_Cozinha".modulate.a = 0.12
+	$"../Mapa/Hidden_Cozinha".z_index = 2
 func _on_cozinha_body_exited(body: Node2D) -> void:
-	$"../Map_pré_player/Hidden_Cozinha".visible = true
-	$"../map_pós_player/Hidden_Cozinha".visible = true
+	$"../Mapa/Hidden_Cozinha".modulate.a = 1
+	$"../Mapa/Hidden_Cozinha".z_index = 0
+
+#Fazer parede do financeiro sumir
+func _on_financeiro_body_entered(body: Node2D) -> void:
+	$"../Mapa/Hidden_Financeiro".modulate.a = 0.12
+	$"../Mapa/Hidden_Financeiro".z_index = 2
+func _on_financeiro_body_exited(body: Node2D) -> void:
+	$"../Mapa/Hidden_Financeiro".modulate.a = 1
+	$"../Mapa/Hidden_Financeiro".z_index = 0
+
+#Fazer parede do financeiro sumir
+func _on_sala_chefe_body_entered(body: Node2D) -> void:
+	$"../Mapa/Hidden_SalaChefe".modulate.a = 0.12
+	$"../Mapa/Hidden_SalaChefe".z_index = 2
+func _on_sala_chefe_body_exited(body: Node2D) -> void:
+	$"../Mapa/Hidden_SalaChefe".modulate.a = 1
+	$"../Mapa/Hidden_SalaChefe".z_index = 0
+
+#Fazer parede do Marketing sumir
+func _on_marketing_body_entered(body: Node2D) -> void:
+	pass
+func _on_marketing_body_exited(body: Node2D) -> void:
+	pass
+
+#Fazer parede do Hall sumir
+func _on_hall_body_entered(body: Node2D) -> void:
+	pass
+func _on_hall_body_exited(body: Node2D) -> void:
+	pass
