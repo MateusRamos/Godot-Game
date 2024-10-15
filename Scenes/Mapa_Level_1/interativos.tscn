@@ -1,0 +1,74 @@
+[gd_scene load_steps=9 format=3 uid="uid://cv33ee56roq7h"]
+
+[ext_resource type="PackedScene" uid="uid://c1tmc4dxgbvr5" path="res://Scenes/Mapa_Level_1/mapa.tscn" id="1_sb8xo"]
+[ext_resource type="Texture2D" uid="uid://cilmb3ynd007e" path="res://Assets/SpriteSheet/Interface/icones_interacao.png" id="2_1jvfl"]
+[ext_resource type="Texture2D" uid="uid://b1tngfyswookj" path="res://Assets/SpriteSheet/Map/interativos.png" id="3_14pef"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mhdyr"]
+texture = ExtResource("2_1jvfl")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ec4yv"]
+texture = ExtResource("3_14pef")
+texture_region_size = Vector2i(128, 128)
+1:0/animation_columns = 4
+1:0/animation_speed = 2.0
+1:0/animation_frame_0/duration = 1.0
+1:0/animation_frame_1/duration = 1.0
+1:0/animation_frame_2/duration = 1.0
+1:0/animation_frame_3/duration = 1.0
+1:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_bc1ae"]
+tile_size = Vector2i(128, 128)
+sources/0 = SubResource("TileSetAtlasSource_mhdyr")
+sources/1 = SubResource("TileSetAtlasSource_ec4yv")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4tknv"]
+texture = ExtResource("2_1jvfl")
+texture_region_size = Vector2i(128, 128)
+0:0/animation_columns = 8
+0:0/animation_frame_0/duration = 1.0
+0:0/animation_frame_1/duration = 1.0
+0:0/animation_frame_2/duration = 1.0
+0:0/animation_frame_3/duration = 1.0
+0:0/animation_frame_4/duration = 1.0
+0:0/animation_frame_5/duration = 1.0
+0:0/animation_frame_6/duration = 1.0
+0:0/animation_frame_7/duration = 1.0
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_lmx1q"]
+tile_size = Vector2i(128, 128)
+sources/0 = SubResource("TileSetAtlasSource_4tknv")
+
+[node name="Interativos" type="Node2D"]
+
+[node name="Mapa" parent="." instance=ExtResource("1_sb8xo")]
+visible = false
+
+[node name="Notebook_Hall" type="Node2D" parent="."]
+z_index = 5
+
+[node name="Notebook" type="TileMapLayer" parent="Notebook_Hall"]
+tile_map_data = PackedByteArray(0, 0, 6, 0, 254, 255, 1, 0, 1, 0, 0, 0, 0, 0)
+tile_set = SubResource("TileSet_bc1ae")
+
+[node name="Icone_Interação" type="TileMapLayer" parent="Notebook_Hall"]
+tile_map_data = PackedByteArray(0, 0, 6, 0, 253, 255, 0, 0, 0, 0, 0, 0, 0, 0)
+tile_set = SubResource("TileSet_lmx1q")
+
+[node name="Quadro_Avisos" type="Node2D" parent="."]
+z_index = 5
+
+[node name="Icone_Interação" type="TileMapLayer" parent="Quadro_Avisos"]
+tile_map_data = PackedByteArray(0, 0, 255, 255, 250, 255, 0, 0, 0, 0, 0, 0, 0, 0)
+tile_set = SubResource("TileSet_lmx1q")

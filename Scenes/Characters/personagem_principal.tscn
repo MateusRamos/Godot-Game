@@ -45,7 +45,7 @@ animation = &"Idle"
 frame_progress = 0.374253
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(0.3, 0.3)
+zoom = Vector2(0.6, 0.6)
 limit_left = -1328
 limit_top = -2224
 limit_right = 2864

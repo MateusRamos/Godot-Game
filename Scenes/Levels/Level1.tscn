@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://cn2flegatrc68"]
+[gd_scene load_steps=12 format=3 uid="uid://cn2flegatrc68"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/level_1.gd" id="1_j0457"]
 [ext_resource type="PackedScene" uid="uid://c1tmc4dxgbvr5" path="res://Scenes/Mapa_Level_1/mapa.tscn" id="2_f8xv0"]
 [ext_resource type="PackedScene" uid="uid://dutdwquij5hqd" path="res://Scenes/Characters/personagem_principal.tscn" id="3_pe3rk"]
 [ext_resource type="Script" path="res://Scenes/Mapa_Level_1/mapa.gd" id="4_sg6y8"]
+[ext_resource type="PackedScene" uid="uid://cv33ee56roq7h" path="res://Scenes/Mapa_Level_1/interativos.tscn" id="5_4q7mj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hd8jy"]
 size = Vector2(2688, 1281)
@@ -27,6 +28,7 @@ size = Vector2(1153, 897)
 script = ExtResource("1_j0457")
 
 [node name="Personagem_principal" parent="." instance=ExtResource("3_pe3rk")]
+visible = false
 z_index = 1
 
 [node name="Mapa" parent="." instance=ExtResource("2_f8xv0")]
@@ -76,6 +78,8 @@ monitorable = false
 [node name="Int_Sala_Chefe" type="CollisionShape2D" parent="Int_hidde_walls/Sala_Chefe"]
 position = Vector2(2240, -1087)
 shape = SubResource("RectangleShape2D_uwkvr")
+
+[node name="Interativos" parent="." instance=ExtResource("5_4q7mj")]
 
 [connection signal="body_entered" from="Int_hidde_walls/Hall" to="Personagem_principal" method="_on_hall_body_entered"]
 [connection signal="body_exited" from="Int_hidde_walls/Hall" to="Personagem_principal" method="_on_hall_body_exited"]

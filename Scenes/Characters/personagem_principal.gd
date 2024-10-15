@@ -41,9 +41,11 @@ func _process(delta):
 #Fazer parede da cozinha sumir
 func _on_cozinha_body_entered(body: Node2D) -> void:
 	$"../Mapa/Hidden_Cozinha".modulate.a = 0.12
+	$"../Interativos/Quadro_Avisos".modulate.a = 0.12
 	$"../Mapa/Hidden_Cozinha".z_index = 2
 func _on_cozinha_body_exited(body: Node2D) -> void:
 	$"../Mapa/Hidden_Cozinha".modulate.a = 1
+	$"../Interativos/Quadro_Avisos".modulate.a = 1
 	$"../Mapa/Hidden_Cozinha".z_index = 0
 
 #Fazer parede do financeiro sumir
